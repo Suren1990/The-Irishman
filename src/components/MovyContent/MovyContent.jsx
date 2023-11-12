@@ -18,7 +18,7 @@ const MovyContent = () => {
   const movyCoverImage = require(`../../assets/images/${movyData.CoverImage}`);
   const movyDuration = movyData.Duration;
 
-  const getData = (itemData) => {
+  const setData = (itemData) => {
     if (itemData) {
       setMovyData(itemData);
       localStorage.setItem("Movy", JSON.stringify(itemData));
@@ -80,7 +80,7 @@ const MovyContent = () => {
           </div>
         </div>
       </div>
-      <Tending TendingNow={data.TendingNow} getData={getData} />
+      <Tending TendingNow={data.TendingNow} setData={setData} />
 
       <div className={cn(styles.movycontent__player, {[styles.movycontent__player_opened]: openedPlayer })}>
         <span className={styles.movycontent__player_close} onClick={closePlayer} />

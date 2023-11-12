@@ -2,7 +2,7 @@ import Slider from "react-slick";
 
 import styles from "./Tending.module.scss";
 
-const Tending = ({ TendingNow, getData }) => {
+const Tending = ({ TendingNow, setData }) => {
   const settings = {
     arrows: false,
     dots: false,
@@ -15,7 +15,7 @@ const Tending = ({ TendingNow, getData }) => {
   return (
     <Slider {...settings} className={styles.tending}>
       {TendingNow.map((item) => (
-        <div className={styles.tending__item} key={item.Id} onClick={() => getData(item)}>
+        <div className={styles.tending__item} key={item.Id} onClick={() => setData(item)}>
           <img
             src={require(`../../assets/images/${item.CoverImage}`)}
             alt={item.Title}
