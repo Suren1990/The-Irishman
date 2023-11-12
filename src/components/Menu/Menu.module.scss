@@ -1,0 +1,83 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-block: 3.75rem 2rem;
+    padding-inline: 2.375rem;
+    background-color: var(--nav-bg);
+
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-block-end: 2.25rem;
+        cursor: pointer;
+    }
+
+    &__user_image {
+        flex-shrink: 0;
+        width: 5.125rem;
+        height: 5.125rem;
+        margin-inline-end: 1.25rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__user_name {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--main-text-color);
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+        margin-block-end: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 3.25rem;
+        width: 100%;
+        height: 4.5rem;
+        padding-inline: 1.5rem;
+        font-size: 2.25rem;
+        color: var(--main-text-color);
+        border-radius: 12px;
+
+        &_active,
+        &:hover {
+            font-weight: 700;
+            background-color: var(--menu-active);
+            transition: background-color 0.24s, font-weight 0.24s;
+        }
+    }
+
+    &__more {
+        margin-block-start: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem
+    }
+
+    &__more_item {
+        padding-inline: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--inactive-color);
+        text-transform: uppercase;
+        transition: color 0.24s;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--main-text-color);
+        }
+    }
+}

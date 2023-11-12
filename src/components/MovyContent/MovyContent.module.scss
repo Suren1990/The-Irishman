@@ -1,0 +1,106 @@
+.movycontent {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 11.25rem;
+    background: right 0 / contain no-repeat;
+
+    // &__top {
+        
+    // }
+
+    &__inner {
+        max-width: 50.125rem;
+    }
+
+    &__type {
+        margin-block-end: 0.75rem;
+        font-size: 1.5rem;
+        letter-spacing: 4.8px;
+        color: var(--inactive-color);
+    }
+
+    &__image {
+        max-width: 42.75rem;
+        margin-block-end: 1.625rem;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 1rem;
+        margin-block-end: 0.625rem;
+        font-size: 1.875rem;
+        color: var(--main-text-color);
+    }
+
+    &__description {
+        margin-block-end: 1.625rem;
+        font-size: 2rem;
+        line-height: 1.25;
+        color: var(--main-text-color);
+    }
+
+    &__actions {
+        display: flex;
+        column-gap: 1.125rem;
+
+        button {
+            width: 15rem;
+            height: 4.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            border-radius: 2.25rem;
+        }
+    }
+
+    &__play {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--play-btn-color);
+        background-color: var(--main-text-color);
+
+        img {
+            margin-inline-end: 0.5rem;
+            height: 1.25rem;
+        }
+    }
+
+    &__more_info {
+        color: var(--main-text-color);
+        background: var(--more-info-btn-bg);
+    }
+
+    &__player {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--main-bg);
+        z-index: 9;
+        
+        &_opened {
+            display: flex;
+        } 
+    }
+
+    &__player_inner {
+        margin: auto;
+    }
+
+    &__player_close {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        display: block;
+        cursor: pointer;
+
+        &:before{
+            content: "\00d7";
+            display: inline-block;
+            font-size: 4rem;
+            color: var(--main-text-color);
+        }
+    }
+}

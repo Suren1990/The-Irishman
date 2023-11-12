@@ -1,0 +1,10 @@
+.tending {
+    width: calc(100vw - 9.875rem);
+    margin-block-start: auto;
+
+    &__item {
+        width: 90% !important;
+        outline: 0;
+        cursor: pointer;
+    }
+}
